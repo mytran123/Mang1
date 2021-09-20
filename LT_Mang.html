@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //Viết chương trình khai báo một mảng
+    //{1, 4, 7, 2, 8, 12}
+    //In ra màn hình, mỗi dòng một phần tử
+    // let arr = [1, 4, 7, 2, 8, 12];
+    // for (let i = 0; i < arr.length; i++) {
+    //     document.write(arr[i] + '<br>');
+    // }
+
+    //In ra màn hình, mỗi dòng một phần tử chia hết cho 3
+    // let arr = [1, 4, 7, 2, 8, 12];
+    // for (let i = 0; i < arr.length; i++) {
+    //     if(arr[i] % 3 === 0) {
+    //         document.write(arr[i] + '<br>');
+    //     }
+    // }
+
+    //Tính tổng các phần tử chia hết cho 4
+    // let arr = [1, 4, 7, 2, 8, 12];
+    // let sum = 0;
+    // for (let i = 0; i < arr.length; i++) {
+    //     if(arr[i] % 4 === 0) {
+    //         sum = sum + arr[i];
+    //     }
+    // }
+    // document.write(sum);
+
+    //Đếm số phần tử chia hết cho 4 trong mảng và tính tổng
+    let arr = [1, 4, 7, 2, 8, 12]
+    let count = 0;
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 4 === 0) {
+            count++;
+            sum += arr[i];
+        }
+    }
+    let average = sum/count;
+    document.write(average);
+
+</script>
+</body>
+</html>

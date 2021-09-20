@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        body {padding-top: 50px}
+        body {
+            padding-top: 50px
+        }
     </style>
 </head>
+
 <body>
 <input type="text" id="txtValue"/>
 <input type="button" id="btnAdd" value="Add" onclick="add_element_to_array();"/>
@@ -14,17 +17,23 @@
 <div id="result"></div>
 <script>
     let x = 0;
-    let array = Array();
+    let array = [];
+
     function add_element_to_array() {
-        array[x] = document.getElementById("TxtValue").value;
-        alert("Element:: " + array[x] + "Added at index" + x);
-        x++;
-        document.getElementById("txtValue").value = "";
+        if (x < 3) {
+            array[x] = document.getElementById("TxtValue").value;
+            alert("Element: " + array[x] + "Added at index" + x);
+            x++;
+            document.getElementById("txtValue ").value = "";
+        } else {
+            alert("đủ rồi")
+        }
     }
+
     function display_array() {
-        let e = "<hr/>"
+        let e = "<hr/>";
         for (let i = 0; i < array.length; i++) {
-            e += "Element " + i + "=" + array[i] + "<br/>";
+            e += "Element" + i + "=" + array[i] + "<br/>";
         }
         document.getElementById("result").innerHTML = e;
     }
